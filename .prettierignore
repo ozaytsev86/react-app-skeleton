@@ -1,0 +1,4 @@
+src/constants/locale
+src/constants/Legal.js
+src/constants/Messages.js
+src/constants/ValidationMessages.js
