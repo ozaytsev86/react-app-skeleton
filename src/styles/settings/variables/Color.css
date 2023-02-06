@@ -1,0 +1,63 @@
+:root {
+  --color-white: white;
+  --color-black: #0e0e0e;
+
+  --color-primary: #de2020;
+  --color-primary-rgb: 222, 32, 32;
+  --color-secondary: #e7e9ed;
+  /*--color-tertiary: #2f2f2f;*/
+
+  --color-grey: #454d5d;
+  --color-grey-light: #9a9fab;
+  --color-grey-lighter: #bbc1cd;
+  --color-grey-lightest: #e7e9ed;
+
+  --color-info: #5e9acf;
+  --color-success: #6fcb5e;
+  --color-warning: #f1b53e;
+  --color-error: #f16e6e;
+
+  --facebook-color: #1877f2;
+  --google-color: #4285f4;
+
+  /* Borders */
+  --border-color-base: var(--color-grey-lightest); /* form-border-color */
+  --border-color-alt-1: var(--color-grey-lighter); /* form-border-color-hover */
+  --border-color-white: var(--color-white);
+  --border-color-black: var(--color-black);
+
+  /* Backgrounds */
+  --bg-color-base: #fefefe;
+  --bg-color-base-rgb: 254, 254, 254;
+  --bg-color-alt-1: #fcfcfc;
+  --bg-color-alt-2: #f8f8f8;
+  --bg-color-alt-3: var(--color-grey-light);
+  --bg-color-white: var(--color-white);
+  --bg-color-black: var(--color-black);
+  --bg-color-overlay: rgba(var(--bg-color-base-rgb), 0.9);
+  --bg-color-info: #dce9f5;
+  --bg-color-success: #ddf3d9;
+  --bg-color-warning: #fcf0d6;
+  --bg-color-error: #fbd7d7;
+
+  /* Fonts */
+  --font-color-base: #1e1e1e; /* body, inputs, default btn, secondary elements text color */
+  --font-color-alt-1: var(--color-grey-light); /* icons, labels */
+  --font-color-alt-2: var(--color-grey-lighter); /* placeholder, alert close message, disabled */
+  --font-color-white: var(--color-white);
+
+  /* Buttons and link */
+  --primary-btn-color-base: var(--color-primary);
+  --primary-btn-color-alt-1: var(--color-white);
+  --primary-btn-color-alt-2: #c81d1d;
+  --primary-btn-color-alt-3: #b11a1a;
+  --secondary-btn-color-base: var(--color-secondary);
+  --secondary-btn-color-alt-1: var(--font-color-base);
+  --secondary-btn-color-alt-2: #d8dce2;
+  --secondary-btn-color-alt-3: #caced7;
+  --link-color-base: var(--font-color-base);
+  --link-color-alt-1: var(--color-primary);
+
+  --default-btn-color-base: #d8dce2;
+  --default-btn-color-alt-1: #caced7;
+}

@@ -1,5 +1,68 @@
-@import '../../node_modules/normalize.css/normalize.css';
+/* Variables */
+@import 'settings/variables/Animation.css';
+@import 'settings/variables/BoxShadow.css';
+@import 'settings/variables/Breakpoint.css';
+@import 'settings/variables/Color.css';
+@import 'settings/variables/Font.css';
+@import 'settings/variables/LineHeight.css';
+@import 'settings/variables/Transition.css';
+@import 'settings/variables/Unit.css';
+@import 'settings/variables/Border.css';
+@import 'settings/variables/Outline.css';
+@import 'settings/variables/Zindex.css';
 
-body {
-  background-color: cornflowerblue;
-}
+@import 'settings/variables/Control.css';
+@import 'settings/variables/Component.css';
+
+/* Reset and dependencies */
+@import '../../node_modules/normalize.css/normalize.css';
+@import 'settings/Base.css';
+
+/* Tools */
+@import 'tools/Animations.css';
+
+/* Vendors */
+
+/* Elements */
+
+/* Layout */
+@import 'layouts/Layout.css';
+
+/* Utils */
+@import './utils/AlignItems.css';
+@import './utils/AlignSelf.css';
+@import './utils/Background.css';
+@import './utils/Border.css';
+@import './utils/BorderRadius.css';
+@import './utils/Bottom.css';
+@import './utils/BoxShadow.css';
+@import './utils/Colors.css';
+@import './utils/Display.css';
+@import './utils/Flex.css';
+@import './utils/FlexBox.css';
+@import './utils/FontSize.css';
+@import './utils/FontWeight.css';
+@import './utils/Grid.css';
+@import './utils/Height.css';
+@import './utils/Hide.css';
+@import './utils/JustifyContent.css';
+@import './utils/Left.css';
+@import './utils/LineHeight.css';
+@import './utils/Margin.css';
+@import './utils/ObjectFit.css';
+@import './utils/Opacity.css';
+@import './utils/Overflow.css';
+@import './utils/Padding.css';
+@import './utils/Position.css';
+@import './utils/Print.css';
+@import './utils/Right.css';
+@import './utils/TextAlign.css';
+@import './utils/TextBreak.css';
+@import './utils/TextDecoration.css';
+@import './utils/TextEllipsis.css';
+@import './utils/TextTransform.css';
+@import './utils/Top.css';
+@import './utils/VisuallyHidden.css';
+@import './utils/WhiteSpace.css';
+@import './utils/Width.css';
+@import './utils/Zindex.css';

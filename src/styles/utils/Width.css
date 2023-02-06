@@ -1,0 +1,70 @@
+.width--auto {
+  width: auto;
+}
+
+.width--fit-content {
+  width: fit-content;
+}
+
+.width--45 {
+  width: 45%;
+}
+
+.width--50 {
+  width: 50%;
+}
+
+.width--100 {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .width--100-xs {
+      width: 100%;
+  }
+}
+
+.width--245px {
+  width: 245px;
+}
+
+.width--300px {
+  width: 300px;
+}
+
+/* Min Width */
+
+.min-width--40px {
+  min-width: 40px;
+}
+
+.min-width--60px {
+  min-width: 60px;
+}
+
+.min-width--125px {
+  min-width: 125px;
+}
+
+.min-width--300px {
+  min-width: 300px;
+}
+
+/* Max Width */
+
+.max-width--100 {
+  max-width: 100%;
+}
+
+.max-width--125px {
+  width: 125px;
+}
+
+
+.max-width--150px {
+  max-width: 150px;
+}
+
+.max-width--200px {
+  max-width: 200px;
+}

@@ -16,7 +16,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'airbnb',
-    'plugin:cypress/recommended',
     './src/eslint-rules/react.js',
     './src/eslint-rules/es6.js',
     './src/eslint-rules/imports.js',

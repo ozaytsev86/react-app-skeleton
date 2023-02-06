@@ -1,0 +1,9 @@
+.opacity--1 {
+  opacity: 1;
+  transition: var(--transition-all);
+}
+
+.opacity--0 {
+  opacity: 0;
+  transition: var(--transition-all);
+}

@@ -1,41 +1,37 @@
 import * as React from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 
-import {Main} from 'components';
+import {Main, AlertContainer} from 'components';
 
-import {AlertContainer} from 'components/alert/AlertContainer';
+import {useFetchPokemon} from 'services/pokemon/Pokemon.query';
 
 import {ROUTES} from 'constants/Routes';
 
-const Landing = React.lazy(() => import('views/landing/Landing'));
+const Landing = React.lazy(() => import('views/Landing'));
 const NotFound = React.lazy(() => import('views/NotFound'));
 
 const publicRoutes = (
-  <>
+  <Routes>
     <Route index exact path={ROUTES.ROOT} element={<Landing />} />
     <Route path="*" element={<NotFound />} />
-  </>
+  </Routes>
 );
 
 export const App = () => {
+  const {isLoading} = useFetchPokemon();
+
   return (
     <>
       <AlertContainer />
-      <div>
-        <p>navbar</p>
-      </div>
 
       <Main>
-        <Loading overlay isVisible={isLoading} />
+        {isLoading && <p>Loading</p>}
         {!isLoading && (
-          <React.Suspense fallback={'Loading...'}>
-            <div>Private routes</div>
+          <React.Suspense fallback="Loading...">
             {publicRoutes}
           </React.Suspense>
         )}
       </Main>
-
-      <div>Footer</div>
     </>
   );
 };

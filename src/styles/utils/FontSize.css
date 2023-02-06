@@ -1,0 +1,49 @@
+.font-size--xxs {
+  font-size: var(--font-size-xxs);
+}
+
+.font-size--xs {
+  font-size: var(--font-size-xs);
+}
+
+.font-size--s {
+  font-size: var(--font-size-s);
+}
+
+.font-size--m {
+  font-size: var(--font-size-m);
+}
+
+.font-size--l {
+  font-size: var(--font-size-l);
+}
+
+.font-size--xl {
+  font-size: var(--font-size-xl);
+}
+
+.font-size--2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.font-size--3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.font-size--4xl {
+  font-size: var(--font-size-4xl);
+}
+
+.font-size--5xl {
+  font-size: var(--font-size-5xl);
+}
+
+.font-size--big-icon {
+  font-size: 60px;
+}
+
+@media (max-width: 480px) {
+  .font-size--2xl-xs {
+    font-size: var(--font-size-2xl);
+  }
+}

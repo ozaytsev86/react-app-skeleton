@@ -1,0 +1,25 @@
+.flex-direction--col {
+  flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .flex-direction--col-xs {
+    flex-direction: column !important;
+  }
+}
+
+.flex-direction--row {
+  flex-direction: row;
+}
+
+.flex-direction--col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-grow--1 {
+  flex-grow: 1;
+}
+
+.flex-wrap--wrap {
+  flex-wrap: wrap;
+}

@@ -1,0 +1,6 @@
+:root {
+  --transition-all: all 0.2s ease-in-out;
+  --transition-slide-down: slide-down 0.2s ease 1;
+  --transition-switch-off: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+  --transition-switch-on: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s, left 0.2s;
+}

@@ -1,0 +1,19 @@
+.border--0 {
+  border: 0;
+}
+
+.border-right--0 {
+  border-right: 0;
+}
+
+.border--base {
+  border: 1px solid var(--border-color-base);
+}
+
+.border-top--base {
+  border-top: 1px solid var(--border-color-base);
+}
+
+.border-right--base {
+  border-right: 1px solid var(--border-color-base);
+}

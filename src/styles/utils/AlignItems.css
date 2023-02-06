@@ -1,0 +1,11 @@
+.align-items--baseline {
+  align-items: baseline;
+}
+
+.align-items--flex-end {
+  align-items: flex-end;
+}
+
+.align-items--center {
+  align-items: center;
+}

@@ -1,0 +1,4 @@
+:root {
+  /* Same as input focus shadow */
+  --outline: rgba(var(--color-primary-rgb), 0.2) solid 2px;
+}

@@ -1,12 +1,12 @@
 import './styles/App.css';
 
-import {QueryClientProvider} from 'react-query';
 import {BrowserRouter} from 'react-router-dom';
 
+import {QueryClientProvider} from '@tanstack/react-query';
+import {queryClient} from 'configs/ReactQueryConfig';
 import {createRoot} from 'react-dom/client';
-
-import {queryClient} from './configs/ReactQueryConfig';
 import {AlertStoreProvider, AppStoreProvider} from 'stores';
+
 import {App} from './App';
 
 const container = document.getElementById('root');

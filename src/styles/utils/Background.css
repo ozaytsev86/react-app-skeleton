@@ -1,0 +1,31 @@
+.bg--white {
+  background-color: var(--bg-color-white);
+}
+
+.bg--black {
+  background-color: var(--bg-color-black);
+}
+
+.bg--alt-2 {
+  background-color: var(--bg-color-alt-2);
+}
+
+.bg--alt-1 {
+  background-color: var(--bg-color-alt-1);
+}
+
+.bg--base {
+  background-color: var(--bg-color-base);
+}
+
+.bg--warning {
+  background-color: var(--bg-color-warning);
+}
+
+.bg--error {
+  background-color: var(--bg-color-error);
+}
+
+.bg--success {
+  background-color: var(--bg-color-success);
+}

@@ -1,0 +1,20 @@
+:root {
+  --base-font-family: 'InterRegular', 'Open Sans', sans-serif;
+  --header-font-family: 'InterMedium', 'Open Sans', sans-serif;
+  --html-font-size: 16px;
+
+  --font-size-xxs: 0.7rem; /* 10px */
+  --font-size-xs: 0.8rem; /* 12px */
+  --font-size-s: 0.9rem; /* 14px */
+  --font-size-m: 1rem; /* 16px */
+  --font-size-l: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.75rem; /* 28px */
+  --font-size-4xl: 2rem; /* 32px */
+  --font-size-5xl: 3.5rem; /* 54px */
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+}

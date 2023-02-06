@@ -1,0 +1,13 @@
+.white-space--normal {
+  white-space: normal;
+}
+
+.white-space--nowrap {
+  white-space: nowrap;
+}
+
+@media (min-width: 480px) {
+  .white-space--nowrap-xs-plus {
+    white-space: nowrap;
+  }
+}

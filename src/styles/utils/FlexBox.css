@@ -1,0 +1,28 @@
+.flex-box--full {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* use this class when you need to center the box */
+.flex-box--full-with-offset {
+  display: flex;
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height) - var(--unit-4)); /* --unit-4=navbar bottom margin */
+  flex-direction: column;
+}
+
+.flex-box--center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-box--vertical {
+  align-items: center;
+  display: flex;
+}
+
+.flex-box--baseline {
+  align-items: baseline;
+  display: flex;
+}

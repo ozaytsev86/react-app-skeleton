@@ -1,0 +1,188 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--html-font-size);
+  line-height: var(--line-height-m);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-color-alt-2);
+  color: var(--font-color-base);
+  font-family: var(--base-font-family);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-normal);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.1px;
+}
+
+a {
+  color: var(--link-color-base);
+  outline: none;
+}
+
+a:hover,
+a:active,
+a.is-active,
+a:hover .fa,
+a:active .fa,
+a.is-active .fa,
+a:hover svg,
+a:active svg,
+a.is-active svg {
+  color: var(--link-color-alt-1);
+  text-decoration: none;
+  transition: var(--transition-all);
+}
+
+a:focus {
+  box-shadow: var(--control-box-shadow);
+  border-radius: var(--border-radius-lg);
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  margin-bottom: var(--unit-8);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--font-color-base);
+  font-family: var(--header-font-family);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+  margin: 0;
+  margin-bottom: var(--unit-3);
+  letter-spacing: 0.3px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: var(--unit-2);
+}
+
+h1,
+.e-h1 {
+  font-size: var(--font-size-2xl);
+}
+
+h2,
+.e-h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3,
+.e-h3 {
+  font-size: var(--font-size-l);
+}
+
+h4,
+.e-h4 {
+  font-size: var(--font-size-m);
+}
+
+h5,
+.e-h5 {
+  font-size: var(--font-size-m);
+}
+
+h6,
+.e-h6 {
+  font-size: var(--font-size-m);
+}
+
+h1 .fa,
+.e-h1 .fa,
+h2 .fa,
+.e-h2 .fa,
+h3 .fa,
+.e-h3 .fa,
+h4 .fa,
+.e-h4 .fa,
+h5 .fa,
+.e-h5 .fa,
+h6 .fa,
+.e-h6 .fa {
+  color: var(--font-color-alt-1);
+}
+
+p {
+  margin: 0;
+  font-size: var(--font-size-s);
+}
+
+a,
+ins,
+u {
+  text-decoration-skip: ink edges;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--border-color-base);
+  border: 0;
+}
+
+abbr[title] {
+  border-bottom: var(--border-width) dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+kbd {
+  border-radius: var(--border-radius);
+  line-height: var(--line-height-m);
+  padding: var(--unit-h) var(--unit-1);
+  background: var(--color-grey);
+  color: var(--font-color-white);
+  font-size: var(--font-size-s);
+}
+
+mark {
+  background: var(--color-warning);
+  color: var(--font-color-base);
+  border-radius: var(--border-radius);
+  padding: var(--unit-o);
+}
+
+blockquote {
+  border-left: var(--border-width-lg) solid var(--border-color-base);
+  margin-left: 0;
+  padding: var(--unit-2) var(--unit-4);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Remove arrows from input number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}

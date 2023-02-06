@@ -1,0 +1,25 @@
+:root {
+  --control-size-sm: var(--unit-8);
+  --control-size: var(--unit-9);
+  --control-size-lg: var(--unit-12);
+
+  --control-padding-x: var(--unit-3);
+  --control-padding-x-sm: var(--unit-2);
+  --control-padding-x-lg: var(--unit-3);
+  --control-padding-y: calc(var(--unit-2) - var(--border-width));
+  --control-padding-y-sm: calc(var(--unit-1) - var(--border-width));
+  --control-padding-y-lg: calc(var(--unit-3) - var(--border-width));
+
+  --control-icon-size: var(--font-size-l);
+  --control-icon-color: var(--font-color-alt-1);
+
+  --control-radio-size: var(--unit-5);
+
+  --control-width-xs: 180px;
+  --control-width-sm: 320px;
+  --control-width-md: 640px;
+  --control-width-lg: 960px;
+  --control-width-xl: 1280px;
+
+  --control-box-shadow: 0 0 0 0.1rem rgba(var(--color-primary-rgb), 0.2);
+}

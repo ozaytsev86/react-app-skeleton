@@ -1,28 +1,14 @@
-import * as React from 'react';
 import {Helmet} from 'react-helmet';
 
-import {Loading} from 'components';
-
-import {locale} from 'constants/locale/EsEs';
-
-import LandingContent from './LandingContent';
-import LandingSubscription from './LandingSubscription';
+import {useAppStore} from 'hooks';
 
 const Landing = () => {
-  const [isImageLoaded, setIsImageLoaded] = React.useState(false);
-
-  const handleOnImageLoaded = () => setIsImageLoaded(true);
+  const {userInfo} = useAppStore();
 
   return (
     <>
-      <Helmet><title>{`${locale.Gigeds} - ${locale.GigedsSlogan}`}</title></Helmet>
-      <Loading isVisible={!isImageLoaded} />
-      <div className={`u-mt--4-minus ${isImageLoaded ? 'a-fade-in' : 'u-display--none'}`}>
-        <LandingContent onImageLoaded={handleOnImageLoaded} />
-        <LandingSubscription
-          onImageLoaded={handleOnImageLoaded}
-        />
-      </div>
+      <Helmet><title>Landing View</title></Helmet>
+      <p>Your name is: {userInfo.name}</p>
     </>
   );
 };

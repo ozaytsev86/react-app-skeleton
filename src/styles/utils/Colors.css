@@ -1,0 +1,38 @@
+.color--white {
+  color: var(--font-color-white);
+}
+
+.color--base {
+  color: var(--font-color-base);
+}
+
+.color--primary {
+  color: var(--color-primary);
+}
+
+.color--alt-1 {
+  color: var(--font-color-alt-1);
+}
+
+.color--success {
+  color: var(--color-success);
+}
+
+.color--error {
+  color: var(--color-error);
+}
+
+.color--info {
+  color: var(--color-info);
+}
+
+.color--instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color--facebook {
+  color: var(--facebook-color);
+}
