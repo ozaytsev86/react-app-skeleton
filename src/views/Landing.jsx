@@ -8,7 +8,7 @@ const Landing = () => {
   return (
     <>
       <Helmet><title>Landing View</title></Helmet>
-      <p>Your name is: {userInfo.name}</p>
+      <p>Your name is: {userInfo?.name}</p>
     </>
   );
 };
