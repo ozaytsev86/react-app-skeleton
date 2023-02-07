@@ -1,4 +1,7 @@
-export const ROUTES = {
-  ROOT: '/',
-  CONTACT: '/contact',
+export const Routes = {
+  Root: '/',
+  Login: '/login',
+  Contact: '/contact',
+  Profile: '/profile',
+  Settings: '/settings',
 };

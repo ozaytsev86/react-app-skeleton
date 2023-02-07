@@ -1,6 +1,18 @@
 export const locale = {
+  Skeleton: 'Skeleton',
+  AlfaUppercase: 'ALFA',
   Hello: 'Hello',
   PageNotFoundCapitalized: 'Page Not Found',
   ErrorUppercase: 'ERROR',
-  clickToClose: 'click to close'
+  clickToClose: 'click to close',
+  LoggedWith: 'Logged with',
+  Home: 'Home',
+  Contact: 'Contact',
+  Profile: 'Profile',
+  Settings: 'Settings',
+  About: 'About',
+  Logout: 'Logout',
+  Login: 'Login',
+  PrivacyPolicy: 'Privacy Policy',
+  TermsAndConds: 'Terms and Conds',
 };

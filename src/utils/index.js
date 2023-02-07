@@ -1,3 +1,7 @@
 import {generateUid} from './Guid';
+import {isSm} from './ScreenSize';
 
-export {generateUid};
+export {
+  generateUid,
+  isSm,
+};

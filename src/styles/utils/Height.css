@@ -3,6 +3,10 @@
 }
 
 /* Pixels */
+.height--48px {
+  height: 48px;
+}
+
 .height--125px {
   height: 125px;
 }

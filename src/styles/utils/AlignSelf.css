@@ -1,3 +1,7 @@
+.align-self--baseline {
+  align-self: baseline;
+}
+
 .align-self--start {
   align-self: flex-start;
 }
