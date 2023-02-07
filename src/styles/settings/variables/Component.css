@@ -1,6 +1,6 @@
 :root {
   --layout-spacing: var(--unit-2);
-  --navbar-height: 60px;
+  --navbar-height: 48px;
   --navbar-main-menu-width: 200px;
 
   --footer-height: 72px;

@@ -12,11 +12,13 @@ import {Routes as AppRoutes} from 'constants/Routes';
 const Landing = React.lazy(() => import('views/Landing'));
 const Contact = React.lazy(() => import('views/Contact'));
 const NotFound = React.lazy(() => import('views/NotFound'));
+const Login = React.lazy(() => import('views/Login'));
 
 const publicRoutes = (
   <Routes>
     <Route index exact path={AppRoutes.Root} element={<Landing />} />
     <Route path={AppRoutes.Contact} element={<Contact />} />
+    <Route path={AppRoutes.Login} element={<Login />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 );

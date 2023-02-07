@@ -15,4 +15,5 @@ export const locale = {
   Login: 'Login',
   PrivacyPolicy: 'Privacy Policy',
   TermsAndConds: 'Terms and Conds',
+  Google: 'Google',
 };

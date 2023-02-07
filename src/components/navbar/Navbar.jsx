@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {NavLink, useNavigate} from 'react-router-dom';
 
-import Logo from 'assets/logo.png';
+import Logo from 'assets/Logo.png';
 import {
   Avatar, Badge, Heading, Menu, Popover, Position, SideSheet
 } from 'evergreen-ui';
