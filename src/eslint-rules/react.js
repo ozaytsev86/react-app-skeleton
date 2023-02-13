@@ -197,7 +197,7 @@ module.exports = {
     // Restrict file extensions that may be required
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md
     // deprecated in favor of import/extensions
-    'react/require-extension': ['off', {extensions: ['.jsx', '.js']}],
+    'react/require-extension': ['off', {extensions: ['.ts', '.tsx']}],
 
     // Require render() methods to return something
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
@@ -246,9 +246,9 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
     'react/jsx-no-target-blank': 'error',
 
-    // only .jsx files may have JSX
+    // only .tsx files may have JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-    'react/jsx-filename-extension': ['error', {extensions: ['.jsx', '.js']}],
+    'react/jsx-filename-extension': ['error', {extensions: ['.tsx', '.ts']}],
 
     // prevent accidental JS comments from being injected into JSX as text
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md

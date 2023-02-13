@@ -1,9 +1,7 @@
 import * as React from 'react';
 import {Route, Routes} from 'react-router-dom';
 
-import {
-  Main, AlertContainer, Navbar, Footer
-} from 'components';
+import {AlertContainer, Navbar, Footer} from 'components';
 
 import {useFetchPokemon} from 'services/pokemon/Pokemon.query';
 
@@ -16,7 +14,7 @@ const Login = React.lazy(() => import('views/Login'));
 
 const publicRoutes = (
   <Routes>
-    <Route index exact path={AppRoutes.Root} element={<Landing />} />
+    <Route index path={AppRoutes.Root} element={<Landing />} />
     <Route path={AppRoutes.Contact} element={<Contact />} />
     <Route path={AppRoutes.Login} element={<Login />} />
     <Route path="*" element={<NotFound />} />
@@ -30,14 +28,14 @@ export const App = () => {
     <>
       <AlertContainer />
       <Navbar />
-      <Main>
+      <main>
         {isLoading && <p>Loading</p>}
         {!isLoading && (
           <React.Suspense fallback="Loading...">
             {publicRoutes}
           </React.Suspense>
         )}
-      </Main>
+      </main>
       <Footer />
     </>
   );

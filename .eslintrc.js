@@ -31,7 +31,7 @@ module.exports = {
     'vite.config.js',
   ],
   overrides: [
-    {files: ['src/**/*.js', 'src/**/*.jsx']}
+    {files: ['src/**/*.ts', 'src/**/*.tsx']}
   ],
   rules: {
     'max-len': ['error', {

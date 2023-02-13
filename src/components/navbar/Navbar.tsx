@@ -1,21 +1,21 @@
 import {useState} from 'react';
 import {NavLink, useNavigate} from 'react-router-dom';
 
-import Logo from 'assets/Logo.png';
 import {
   Avatar, Badge, Heading, Menu, Popover, Position, SideSheet
 } from 'evergreen-ui';
+import {useAppStore} from 'hooks';
 import {
   BiEnvelope, BiCog, BiHome, BiInfoCircle, BiLogIn, BiLogOut, BiUser
 } from 'react-icons/bi';
 import {isSm} from 'utils';
 import About from 'views/About';
 
-import {useAppStore} from 'hooks/UseAppStore';
-
 import {locale} from 'constants/locale/EsEs';
 import {Routes} from 'constants/Routes';
 import {UNIT_1, UNIT_3, UNIT_8} from 'constants/StyleVariables';
+
+import Logo from 'assets/Logo.png';
 
 import {NavbarLink} from './NavbarLink';
 import {NavbarMenuItemLink} from './NavbarMenuItemLink';

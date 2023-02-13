@@ -107,8 +107,8 @@ module.exports = {
       'off',
       'always',
       {
-        js: 'never',
-        jsx: 'never'
+        ts: 'never',
+        tsx: 'never'
       }
     ],
 
@@ -160,7 +160,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: 'statics/**',
+            pattern: 'assets/**',
             group: 'internal',
             position: 'before'
           }
