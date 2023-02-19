@@ -1,26 +1,34 @@
 import * as React from 'react';
+import {ReactElement} from 'react';
 
 import {AppReducer, SET_USER_INFO} from './App.reducer';
 
-const initialState = {
-  userInfo: null,
+interface AppStore {
+  userInfo: null | {
+    name: string
+    sprites: { front_default: string }
+  }
+}
+
+const initialState: AppStore = {
+  userInfo: null
 };
 
-export const AppStoreProvider = ({children}) => {
+export const AppContext = React.createContext(initialState);
+
+export const AppStoreProvider = ({children}: { children: ReactElement }) => {
   const [appState, dispatch] = React.useReducer(AppReducer, initialState);
 
-  const setUserInfo = (accessToken) => {
-    dispatch({type: SET_USER_INFO, payload: accessToken});
+  const setUserInfo = (userInfo: { name: string }) => {
+    dispatch({type: SET_USER_INFO, payload: userInfo});
   };
 
   return (
     <AppContext.Provider value={{
       ...appState,
-      setUserInfo,
+      setUserInfo
     }}>
       {children}
     </AppContext.Provider>
   );
 };
-
-export const AppContext = React.createContext(initialState);

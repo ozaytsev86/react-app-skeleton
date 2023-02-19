@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-commonjs
 module.exports = {
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   env:
   {
     node: true,
@@ -8,14 +8,17 @@ module.exports = {
     browser: true,
     // mocha: true
   },
-  parserOptions: {sourceType: 'module'},
+  parserOptions: {
+    project: './tsconfig.json',
+    sourceType: 'module',
+  },
   settings: {
     react: {version: 'detect'},
   },
   extends: [
-    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'airbnb',
     './src/eslint-rules/react.js',
     './src/eslint-rules/es6.js',
     './src/eslint-rules/imports.js',

@@ -1,9 +1,16 @@
+import {IconType} from 'react-icons';
 import {useMatch, useNavigate, useResolvedPath} from 'react-router-dom';
 
 import {Menu, Pane} from 'evergreen-ui';
 import './navbar-link.css';
 
-export const NavbarMenuItemLink = ({path, text, Icon}) => {
+interface NavbarMenuItemLinkProps {
+  path: string
+  text: string
+  Icon: IconType
+}
+
+export const NavbarMenuItemLink = ({path, text, Icon}: NavbarMenuItemLinkProps) => {
   const navigate = useNavigate();
   const resolved = useResolvedPath(path);
   const match = useMatch({path: resolved.pathname, end: true});

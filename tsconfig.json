@@ -35,6 +35,7 @@
       "constants/*": ["src/constants/*"],
       "stores": ["src/stores"],
       "configs/*": ["src/configs/*"],
+      "types": ["src/types"],
     }
   },
 }

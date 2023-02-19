@@ -64,14 +64,14 @@ module.exports = {
 
     // disallow renaming import, export, and destructured assignments to the same name
     // http://eslint.org/docs/rules/no-useless-rename
-    // 'no-useless-rename': [
-    //   'error',
-    //   {
-    //     ignoreDestructuring: false,
-    //     ignoreImport: false,
-    //     ignoreExport: false
-    //   }
-    // ],
+    'no-useless-rename': [
+      'error',
+      {
+        ignoreDestructuring: false,
+        ignoreImport: false,
+        ignoreExport: false
+      }
+    ],
 
     // require let or const instead of var
     'no-var': 'error',

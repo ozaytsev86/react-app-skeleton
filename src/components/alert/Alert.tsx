@@ -3,28 +3,29 @@ import * as React from 'react';
 import './Alert.css';
 import {locale} from 'constants/locale/EsEs';
 
-const AlertDefaultProps = {
-  testId: 'alert',
-  id: 0,
-  type: 'info',
-  icon: 'info-circle',
-  message: '',
-  msec: 0
-};
+interface AlertProps {
+  testId?: string
+  id: string
+  type?: string
+  message: string
+  msec?: number
+  onRemoveAlert: (id: string) => void
+}
 
 export const Alert = ({
-  testId,
+  testId = 'alert',
   id,
-  type,
+  type = 'info',
   message,
-  msec,
+  msec = 0,
   onRemoveAlert
-}) => {
-  const timebarRef = React.useRef();
+}: AlertProps) => {
+  const timebarRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    if (msec) {
+    if (msec && timebarRef.current) {
       timebarRef.current.addEventListener('animationend', function onAnimationEnd() {
+        // @ts-expect-error it won't be undefined
         timebarRef.current.removeEventListener('animationend', onAnimationEnd);
         onRemoveAlert(id);
       });
@@ -63,5 +64,3 @@ export const Alert = ({
     </div>
   );
 };
-
-Alert.defaultProps = AlertDefaultProps;

@@ -64,6 +64,7 @@ module.exports = {
     // Forbid mutable exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
     'import/no-mutable-exports': 'error',
+    'no-multiple-empty-lines': ['error', {max: 1, maxBOF: 0, maxEOF: 0}],
 
     // Module systems:
 

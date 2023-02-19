@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {ReactElement} from 'react';
+import {IconType} from 'react-icons';
 
 import {
   HiOutlineCheckCircle, HiOutlineExclamationCircle, HiOutlineInformationCircle, HiOutlineXCircle
@@ -12,21 +14,28 @@ import {
   REMOVE_ALERT
 } from './Alert.reducer';
 
-export const AlertStoreProvider = ({children}) => {
+interface AddAlertParams {
+  icon: IconType
+  type: string
+  message: string
+  msec?: number
+}
+
+export const AlertStoreProvider = ({children}: {children: ReactElement}) => {
   const [alertState, dispatch] = React.useReducer(AlertReducer, initialState);
 
-  const addAlert = (alert) => {
+  const addAlert = (alert: AddAlertParams) => {
     dispatch({type: ADD_ALERT, payload: {id: generateUid(), ...alert}});
   };
 
-  const removeAlert = (alertId) => {
+  const removeAlert = (alertId: string) => {
     dispatch({type: REMOVE_ALERT, payload: {id: alertId}});
   };
 
-  const createSuccessAlert = (message) => addAlert({icon: HiOutlineCheckCircle, type: 'success', message, msec: 5000});
-  const createInfoAlert = (message) => addAlert({icon: HiOutlineInformationCircle, type: 'info', message, msec: 5000});
-  const createWarningAlert = (message) => addAlert({icon: HiOutlineExclamationCircle, type: 'warning', message});
-  const createErrorAlert = (message) => addAlert({icon: HiOutlineXCircle, type: 'error', message});
+  const createSuccessAlert = (message: string) => addAlert({icon: HiOutlineCheckCircle, type: 'success', message, msec: 5000});
+  const createInfoAlert = (message: string) => addAlert({icon: HiOutlineInformationCircle, type: 'info', message, msec: 5000});
+  const createWarningAlert = (message: string) => addAlert({icon: HiOutlineExclamationCircle, type: 'warning', message});
+  const createErrorAlert = (message: string) => addAlert({icon: HiOutlineXCircle, type: 'error', message});
 
   return (
     <AlertContext.Provider value={{

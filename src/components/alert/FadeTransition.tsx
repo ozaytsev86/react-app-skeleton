@@ -1,46 +1,32 @@
-import * as React from 'react';
+import {ReactElement} from 'react';
 import {Transition} from 'react-transition-group';
 
-import PropTypes from 'prop-types';
+interface FadeTransitionProps {
+  duration: number,
+  children: ReactElement | null
+}
 
-const FadeTransitionPropTypes = {
-  in: PropTypes.bool,
-  duration: PropTypes.number,
-  children: PropTypes.node
-};
-
-const FadeTransitionDefaultProps = {
-  in: false,
-  duration: 300,
-  children: null
-};
-
-class FadeTransition extends React.Component {
-  defaultStyles = {
+const FadeTransition = ({
+  duration = 300,
+  children = null
+}: FadeTransitionProps) => {
+  const defaultStyles = {
     opacity: 0,
     // eslint-disable-next-line react/destructuring-assignment
-    transition: `opacity ${this.props.duration}ms ease-in-out`
+    transition: `opacity ${duration}ms ease-in-out`
   };
 
-  transitionStyles = {
+  const transitionStyles = {
     entering: {opacity: 1},
     entered: {opacity: 1}
   };
 
-  render() {
-    const {
-      in: inProp, duration, children, ...rest
-    } = this.props;
-
-    return (
-      <Transition {...rest} in={inProp} timeout={duration}>
-        {state => <div style={{...this.defaultStyles, ...this.transitionStyles[state]}}>{children}</div>}
-      </Transition>
-    );
-  }
-}
-
-FadeTransition.propTypes = FadeTransitionPropTypes;
-FadeTransition.defaultProps = FadeTransitionDefaultProps;
+  return (
+    <Transition in={false} timeout={duration}>
+      {/*// @ts-expect-error its ok */}
+      {state => <div style={{...defaultStyles, ...transitionStyles[state]}}>{children}</div>}
+    </Transition>
+  );
+};
 
 export default FadeTransition;
