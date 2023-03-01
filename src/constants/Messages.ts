@@ -1,20 +1,18 @@
-export const errorMessages = {
-  MESSAGE_STATUS_200: 'error 200 message',
-  MESSAGE_STATUS_201: 'error 201 message',
-  MESSAGE_STATUS_204: 'error 204 message',
-  MESSAGE_STATUS_400: 'error 400 message',
-  MESSAGE_STATUS_401: 'error 401 message',
-  MESSAGE_STATUS_403: 'error 403 message',
-  MESSAGE_STATUS_404: 'error 404 message',
-  MESSAGE_STATUS_405: 'error 405 message',
-  MESSAGE_STATUS_409: 'error 409 message',
-  MESSAGE_STATUS_413: 'error 413 message',
-  MESSAGE_STATUS_422: 'error 422 message',
-  MESSAGE_STATUS_429: 'error 429 message',
-  MESSAGE_STATUS_500: 'error 500 message',
-  MESSAGE_STATUS_503: 'error 503 message',
-};
+import {locale} from 'constants/locale/EnUs';
 
-export const successMessages = {
-  CreatedSuccess: 'Created successfully',
+export const errorMessages: {[key: string]: string} = {
+  MESSAGE_STATUS_200: locale.Status200,
+  MESSAGE_STATUS_201: locale.Status201,
+  MESSAGE_STATUS_204: locale.Status204,
+  MESSAGE_STATUS_400: locale.Status400,
+  MESSAGE_STATUS_401: locale.Status401,
+  MESSAGE_STATUS_403: locale.Status403,
+  MESSAGE_STATUS_404: locale.Status404,
+  MESSAGE_STATUS_405: locale.Status405,
+  MESSAGE_STATUS_409: locale.Status409,
+  MESSAGE_STATUS_413: locale.Status413,
+  MESSAGE_STATUS_422: locale.Status422,
+  MESSAGE_STATUS_429: locale.Status429,
+  MESSAGE_STATUS_500: locale.Status500,
+  MESSAGE_STATUS_503: locale.Status503,
 };

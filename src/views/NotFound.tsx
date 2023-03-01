@@ -1,6 +1,6 @@
 import {Helmet} from 'react-helmet';
 
-import {locale} from 'constants/locale/EsEs';
+import {locale} from 'constants/locale/EnUs';
 
 import Img404 from 'assets/404.png';
 

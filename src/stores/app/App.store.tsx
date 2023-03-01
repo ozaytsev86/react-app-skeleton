@@ -8,7 +8,9 @@ import {AppReducer, SET_USER_INFO} from './App.reducer';
 export interface AppState {
   userInfo: null | {
     name: string
-    sprites: { front_default: string }
+    sprites: {
+      front_default: string
+    }
   }
   setUserInfo: (data: $TSFixMe) => void,
 }

@@ -3,7 +3,7 @@ import * as React from 'react';
 import {Button, Heading, SideSheet} from 'evergreen-ui';
 import {BiCopyright} from 'react-icons/bi';
 
-import {locale} from 'constants/locale/EsEs';
+import {locale} from 'constants/locale/EnUs';
 import {UNIT_2} from 'constants/StyleVariables';
 
 import {isSm} from 'utils/ScreenSize';

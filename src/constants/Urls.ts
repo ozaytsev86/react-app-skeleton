@@ -1,1 +1,1 @@
-export const POKEMON = '/v2/pokemon/ditto';
+export const USER_INFO = '/v2/pokemon/ditto';

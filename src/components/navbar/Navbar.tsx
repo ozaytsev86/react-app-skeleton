@@ -11,7 +11,7 @@ import {
 import {isSm} from 'utils';
 import About from 'views/About';
 
-import {locale} from 'constants/locale/EsEs';
+import {locale} from 'constants/locale/EnUs';
 import {Routes} from 'constants/Routes';
 import {UNIT_1, UNIT_3, UNIT_8} from 'constants/StyleVariables';
 

@@ -1,4 +1,4 @@
-import {locale} from 'constants/locale/EsEs';
+import {locale} from 'constants/locale/EnUs';
 
 export const statusesObj = {
   0: locale.Success,

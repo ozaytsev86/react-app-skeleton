@@ -1,3 +1,3 @@
 export const Queries = {
-  Pokemon: 'Pokemon'
+  UserInfo: 'UserInfo'
 };

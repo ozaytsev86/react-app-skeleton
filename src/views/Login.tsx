@@ -1,6 +1,6 @@
 import {Avatar, Button, Heading} from 'evergreen-ui';
 
-import {locale} from 'constants/locale/EsEs';
+import {locale} from 'constants/locale/EnUs';
 import {UNIT_16} from 'constants/StyleVariables';
 
 import Logo from 'assets/Logo.png';

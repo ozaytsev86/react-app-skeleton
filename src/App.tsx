@@ -3,7 +3,7 @@ import {Route, Routes} from 'react-router-dom';
 
 import {Navbar, Footer} from 'components';
 
-import {useFetchPokemon} from 'services/pokemon/Pokemon.query';
+import {useFetchUserInfo} from 'services/user/User.query';
 
 import {Routes as AppRoutes} from 'constants/Routes';
 
@@ -22,7 +22,7 @@ const publicRoutes = (
 );
 
 export const App = () => {
-  const {isLoading} = useFetchPokemon();
+  const {isLoading} = useFetchUserInfo();
 
   return (
     <>
