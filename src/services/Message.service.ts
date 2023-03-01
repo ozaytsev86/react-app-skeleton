@@ -1,3 +1,3 @@
 import {errorMessages} from 'constants/Messages';
 
-export const getMessage = (key) => errorMessages[key];
+export const getMessage = (key: string) => errorMessages[key];

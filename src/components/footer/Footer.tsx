@@ -12,8 +12,8 @@ import {PrivacyPolicy} from './PrivacyPolicy';
 import {TermsAndConds} from './TermsAndConds';
 
 export const Footer = () => {
-  const [isVisiblePrivacyPolicy, setIsVisiblePrivacyPolicy] = React.useState(false);
-  const [isVisibleTermsAndConds, setIsVisibleTermsAndConds] = React.useState(false);
+  const [isVisiblePrivacyPolicy, setIsVisiblePrivacyPolicy] = React.useState<boolean>(false);
+  const [isVisibleTermsAndConds, setIsVisibleTermsAndConds] = React.useState<boolean>(false);
 
   return (
     <div

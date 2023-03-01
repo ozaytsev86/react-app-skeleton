@@ -1,5 +1,6 @@
-import axios from 'axios';
-import qs from 'qs';
+import axios, {AxiosHeaders, Method} from 'axios';
+import {stringify} from 'qs';
+import {$TSFixMe} from 'types';
 
 import {getMessage} from 'services/Message.service';
 
@@ -8,21 +9,35 @@ const ACTION_POST = 'post';
 const ACTION_PUT = 'put';
 const ACTION_DELETE = 'delete';
 
-const makeRequest = ({method, url, data, privateRequest, params, errorMessage = ''}) => {
-  // const token = getAccessToken();
+interface MakeRequestParams {
+  method: Method,
+  url: string,
+  data?: $TSFixMe,
+  isPrivateRequest: boolean,
+  params?: $TSFixMe,
+  errorMessage?: string
+}
+
+const makeRequest = ({method, url, data, isPrivateRequest, params, errorMessage = ''}: MakeRequestParams) => {
   const token = false;
-  let headers = {
+  let headers: AxiosHeaders['RawAxiosHeaders'] = {
     'content-type': 'application/x-www-form-urlencoded',
   };
 
-  if (token && privateRequest) {
+  if (token && isPrivateRequest) {
     headers = {
       'content-type': 'application/json',
       Authorization: `Bearer ${token}`,
     };
   }
 
-  return axios({method, params, url, data, headers})
+  return axios({
+    method,
+    params,
+    url: `${import.meta.env.VITE_APP_API_URL}${url}`,
+    data,
+    headers
+  })
     .then((response) => {
       return Promise.resolve(response?.data || response);
     })
@@ -49,13 +64,59 @@ const makeRequest = ({method, url, data, privateRequest, params, errorMessage = 
     });
 };
 
+interface PublicMethodParams {
+  url: string,
+  data?: $TSFixMe,
+  errorMessage?: string,
+}
+
+interface GetMethodParams {
+  url: string,
+  params?: string | string[] | number | number[],
+}
+
+interface MethodParams {
+  url: string,
+  data?: $TSFixMe,
+}
+
 export const ApiService = {
-  // eslint-disable-next-line max-len
-  publicGet: ({url, data, errorMessage}) => makeRequest({method: ACTION_GET, url: `${import.meta.env.VITE_APP_API_URL}${url}`, privateRequest: false, errorMessage, data: qs.stringify(data)}),
-  // eslint-disable-next-line max-len
-  publicPost: ({url, data, errorMessage}) => makeRequest({method: ACTION_POST, url: `${import.meta.env.VITE_APP_API_URL}${url}`, privateRequest: false, errorMessage, data: qs.stringify(data)}),
-  get: ({url, params = null}) => makeRequest({method: ACTION_GET, url: `${import.meta.env.VITE_APP_API_URL}${url}`, params, privateRequest: true}),
-  post: ({url, data}) => makeRequest({method: ACTION_POST, url: `${import.meta.env.VITE_APP_API_URL}${url}`, privateRequest: true, data}),
-  put: ({url, data}) => makeRequest({method: ACTION_PUT, url: `${import.meta.env.VITE_APP_API_URL}${url}`, privateRequest: true, data}),
-  delete: ({url, data}) => makeRequest({method: ACTION_DELETE, url: `${import.meta.env.VITE_APP_API_URL}${url}`, privateRequest: true, data}),
+  publicGet: ({url, data, errorMessage}: PublicMethodParams) => makeRequest({
+    method: ACTION_GET,
+    url,
+    isPrivateRequest: false,
+    errorMessage,
+    data: stringify(data)
+  }),
+  publicPost: ({url, data, errorMessage}: PublicMethodParams) => makeRequest({
+    method: ACTION_POST,
+    url,
+    isPrivateRequest: false,
+    errorMessage,
+    data: stringify(data)
+  }),
+  get: ({url, params}: GetMethodParams) => makeRequest({
+    method: ACTION_GET,
+    url,
+    params,
+    isPrivateRequest: true
+  }),
+  post: ({url, data}: MethodParams) => makeRequest({
+    method: ACTION_POST,
+    url,
+    isPrivateRequest: true,
+    data
+  }),
+  put: ({url, data}: MethodParams) => makeRequest({
+    method: ACTION_PUT,
+    url,
+    isPrivateRequest: true,
+    data
+  }),
+  delete: ({url, data}: MethodParams) => makeRequest({
+    method: ACTION_DELETE,
+    url,
+    isPrivateRequest: true,
+    data
+  }),
 };

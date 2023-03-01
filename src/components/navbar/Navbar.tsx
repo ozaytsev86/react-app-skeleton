@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import * as React from 'react';
 import {NavLink, useNavigate} from 'react-router-dom';
 
 import {
@@ -24,7 +24,7 @@ export const Navbar = () => {
   const {userInfo} = useAppStore();
   const navigate = useNavigate();
 
-  const [isVisibleAboutSideSheet, setIsVisibleAboutSideSheet] = useState(false);
+  const [isVisibleAboutSideSheet, setIsVisibleAboutSideSheet] = React.useState<boolean>(false);
 
   const handleLogout = async () => {
     navigate(Routes.Root);

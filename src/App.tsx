@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Route, Routes} from 'react-router-dom';
 
-import {AlertContainer, Navbar, Footer} from 'components';
+import {Navbar, Footer} from 'components';
 
 import {useFetchPokemon} from 'services/pokemon/Pokemon.query';
 
@@ -26,7 +26,6 @@ export const App = () => {
 
   return (
     <>
-      <AlertContainer />
       <Navbar />
       <main>
         {isLoading && <p>Loading</p>}
