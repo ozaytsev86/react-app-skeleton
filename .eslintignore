@@ -4,8 +4,4 @@ src/constants/Messages.js
 src/constants/ValidationMessages.js
 node_modules
 build
-.babelrc.js
 .eslintrc.js
-craco.config.js
-./storybook
-src/components/**/*.stories.js
