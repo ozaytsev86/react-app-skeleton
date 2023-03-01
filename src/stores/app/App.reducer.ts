@@ -1,6 +1,15 @@
+import {$TSFixMe} from 'types';
+
+import {AppState} from './App.store';
+
 export const SET_USER_INFO = 'SET_USER_INFO';
 
-export const AppReducer = (state, action) => {
+type Action = {
+  type: string,
+  payload: $TSFixMe
+}
+
+export const AppReducer = (state: AppState, action: Action) => {
   switch (action.type) {
     case SET_USER_INFO:
       return {

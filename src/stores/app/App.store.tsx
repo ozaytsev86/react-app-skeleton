@@ -1,17 +1,22 @@
 import * as React from 'react';
 import {ReactElement} from 'react';
 
+import {$TSFixMe} from 'types';
+
 import {AppReducer, SET_USER_INFO} from './App.reducer';
 
-interface AppStore {
+export interface AppState {
   userInfo: null | {
     name: string
     sprites: { front_default: string }
   }
+  setUserInfo: (data: $TSFixMe) => void,
 }
 
-const initialState: AppStore = {
-  userInfo: null
+const initialState: AppState = {
+  userInfo: null,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  setUserInfo: () => {}
 };
 
 export const AppContext = React.createContext(initialState);
