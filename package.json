@@ -2,15 +2,15 @@
   "name": "react-app-skeleton",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
   "main": "index.js",
+  "author": {
+    "name": "Oleksandr Zaytsev"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ozaytsev86/react-app-skeleton.git"
   },
-  "author": {
-    "name": "Oleksandr Zaytsev"
-  },
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ozaytsev86/react-app-skeleton/issues"
   },
